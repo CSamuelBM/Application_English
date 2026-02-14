@@ -16,10 +16,9 @@ public class Vista extends JFrame{
 
         titulo();
         PnBotones pnBotones = new PnBotones();
-        PnContenido pnContenido = new PnContenido();
-        
         add(pnBotones, BorderLayout.WEST);
-        add(pnContenido, BorderLayout.CENTER);
+        PnContenido pnContenido = new PnContenido();
+        panelScrol(pnContenido);
         
         setLocationRelativeTo(null);
         setResizable(true);
@@ -37,6 +36,12 @@ public class Vista extends JFrame{
         
         pnTitulo.add(lbTitulo);
         add(pnTitulo, BorderLayout.NORTH);
+    }
+    
+    private void panelScrol(JPanel pnPanel) {
+        JScrollPane spPrincipal = new JScrollPane(pnPanel);
+        spPrincipal.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        add(spPrincipal);
     }
     
 }
