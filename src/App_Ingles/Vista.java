@@ -5,6 +5,8 @@ import javax.swing.*;
 
 public class Vista extends JFrame{
     
+    private JLabel lbTitulo;
+    
     public Vista(){
         configuracion();
     }
@@ -15,10 +17,7 @@ public class Vista extends JFrame{
         getContentPane().setLayout(new BorderLayout());
 
         titulo();
-        PnBotones pnBotones = new PnBotones();
-        add(pnBotones, BorderLayout.WEST);
-        PnContenido pnContenido = new PnContenido();
-        panelScrol(pnContenido);
+        paneles();
         
         setLocationRelativeTo(null);
         setResizable(true);
@@ -30,7 +29,7 @@ public class Vista extends JFrame{
         pnTitulo.setBackground(new Color(71, 156, 252));
         pnTitulo.setBorder(BorderFactory.createLineBorder(new Color(117, 173, 255), 2, true));
         
-        JLabel lbTitulo = new JLabel("Learn the basics of ENGLISH", SwingConstants.CENTER);
+        lbTitulo = new JLabel("Learn the basics of ENGLISH", SwingConstants.CENTER);
         lbTitulo.setFont(new Font("Arial", Font.BOLD, 20));
         lbTitulo.setForeground(Color.BLACK);
         
@@ -38,10 +37,22 @@ public class Vista extends JFrame{
         add(pnTitulo, BorderLayout.NORTH);
     }
     
+    private void paneles(){
+        PnContenido pnContenido = new PnContenido();
+        panelScrol(pnContenido);
+        
+        PnBotones pnBotones = new PnBotones(pnContenido, this);
+        add(pnBotones, BorderLayout.WEST);
+    }
+    
     private void panelScrol(JPanel pnPanel) {
         JScrollPane spPrincipal = new JScrollPane(pnPanel);
         spPrincipal.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         add(spPrincipal);
+    }
+    
+    public void setTitulo(String titulo){
+        lbTitulo.setText(titulo);
     }
     
 }

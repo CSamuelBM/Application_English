@@ -7,8 +7,11 @@ public class PnBotones extends JPanel{
     
     private JButton btInicio, btTeoria, btFormulario, btSalir;
     private PnContenido pnContenido;
+    private Vista vista;
     
-    public PnBotones(){
+    public PnBotones(PnContenido pnContenido, Vista vista){
+        this.pnContenido = pnContenido;
+        this.vista = vista;
         botones();
         acciones();
     }
@@ -56,13 +59,15 @@ public class PnBotones extends JPanel{
     }
 
     private void acciones() {
-        pnContenido = new PnContenido();
-        
         btInicio.addActionListener(e -> {
-            pnContenido.concexion("INICIO");
+            vista.setTitulo("Learn the basics of ENGLISH");
+            pnContenido.conexion("INICIO");
         } );
         
-        
+        btTeoria.addActionListener(e -> {
+            vista.setTitulo("Abecedario y planetas en ENGLISH");
+            pnContenido.conexion("TEORIA");
+        } );
     }
     
 }

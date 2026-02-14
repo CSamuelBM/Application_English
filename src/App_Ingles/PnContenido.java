@@ -6,7 +6,6 @@ import javax.swing.*;
 public class PnContenido extends JPanel{
     
     private CardLayout contenido;
-    private PnInicio pnInicio;
     
     public PnContenido(){
         ventanas();
@@ -16,12 +15,14 @@ public class PnContenido extends JPanel{
         contenido = new CardLayout();
         setLayout(contenido);
         
-        pnInicio = new PnInicio();
-        
+        PnInicio pnInicio = new PnInicio();
         add(pnInicio, "INICIO");
+        
+        PnTeoria pnTeoria = new PnTeoria();
+        add(pnTeoria, "TEORIA");
     }
     
-    public void concexion(String id){
+    public void conexion(String id){
         contenido.show(this, id);
     }
     
