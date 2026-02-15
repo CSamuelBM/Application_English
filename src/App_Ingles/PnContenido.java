@@ -20,6 +20,9 @@ public class PnContenido extends JPanel{
         
         PnTeoria pnTeoria = new PnTeoria();
         add(pnTeoria, "TEORIA");
+        
+        PnFormulario pnFormulario = new PnFormulario();
+        add(pnFormulario, "FORMULARIO");
     }
     
     public void conexion(String id){

@@ -26,6 +26,7 @@ public class PnTeoria extends JPanel{
         gbc.weightx = 1.0;
         gbc.weighty = 0.0;
         gbc.fill = GridBagConstraints.BOTH;
+        gbc.insets = new Insets(0, 0, 0, 10);
         JPanel pnLetraA = new JPanel(new BorderLayout());
         pnLetraA.setBackground(Color.WHITE);
         pnLetraA.setBorder(BorderFactory.createLineBorder(Color.BLUE));

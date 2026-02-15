@@ -68,6 +68,11 @@ public class PnBotones extends JPanel{
             vista.setTitulo("Abecedario y planetas en ENGLISH");
             pnContenido.conexion("TEORIA");
         } );
+        
+        btFormulario.addActionListener(e -> {
+            vista.setTitulo("Formulario o prueva de ENGLISH");
+            pnContenido.conexion("FORMULARIO");
+        } );
     }
     
 }
