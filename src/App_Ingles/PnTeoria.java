@@ -29,7 +29,7 @@ public class PnTeoria extends JPanel{
         gbc.weightx = 1.0;
         gbc.weighty = 0.0;
         gbc.fill = GridBagConstraints.BOTH;
-        gbc.insets = new Insets(0, 0, 0, 10);
+        gbc.insets = new Insets(15, 10, 0, 10);
         JPanel pnLetraA = new JPanel(new BorderLayout());
         pnLetraA.setBackground(Color.WHITE);
         pnLetraA.setBorder(BorderFactory.createLineBorder(Color.BLUE));
@@ -504,7 +504,7 @@ public class PnTeoria extends JPanel{
         JLabel lbW = new JLabel("W w", SwingConstants.CENTER);
         lbW.setForeground(Color.BLACK);
         pnLetraW.add(lbW, BorderLayout.NORTH);
-        JLabel lbEscribirW = new JLabel("dabl iu", SwingConstants.CENTER);
+        JLabel lbEscribirW = new JLabel("dabliu", SwingConstants.CENTER);
         lbEscribirW.setForeground(Color.BLACK);
         pnLetraW.add(lbEscribirW, BorderLayout.CENTER);
         JButton btDecirW = new JButton("Pronunciacion");

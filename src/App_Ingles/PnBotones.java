@@ -71,6 +71,7 @@ public class PnBotones extends JPanel{
         
         btFormulario.addActionListener(e -> {
             vista.setTitulo("Formulario o prueva de ENGLISH");
+            pnContenido.reinicioFormulario();
             pnContenido.conexion("FORMULARIO");
         } );
     }

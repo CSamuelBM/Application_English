@@ -6,6 +6,7 @@ import javax.swing.*;
 public class PnContenido extends JPanel{
     
     private CardLayout contenido;
+    private PnFormulario pnFormulario;
     
     public PnContenido(){
         ventanas();
@@ -21,12 +22,16 @@ public class PnContenido extends JPanel{
         PnTeoria pnTeoria = new PnTeoria();
         add(pnTeoria, "TEORIA");
         
-        PnFormulario pnFormulario = new PnFormulario();
+        pnFormulario = new PnFormulario();
         add(pnFormulario, "FORMULARIO");
     }
     
     public void conexion(String id){
         contenido.show(this, id);
+    }
+    
+    public void reinicioFormulario(){
+        pnFormulario.reinicio();
     }
     
 }
