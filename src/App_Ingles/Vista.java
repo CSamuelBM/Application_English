@@ -1,6 +1,7 @@
 package App_Ingles;
 
 import java.awt.*;
+import java.net.URL;
 import javax.swing.*;
 
 public class Vista extends JFrame{
@@ -20,7 +21,7 @@ public class Vista extends JFrame{
         paneles();
         
         setLocationRelativeTo(null);
-        setResizable(true);
+        setResizable(false);
         setVisible(true);
     }
 
@@ -32,6 +33,11 @@ public class Vista extends JFrame{
         lbTitulo = new JLabel("Learn the basics of ENGLISH", SwingConstants.CENTER);
         lbTitulo.setFont(new Font("Arial", Font.BOLD, 20));
         lbTitulo.setForeground(Color.BLACK);
+        
+        URL url = getClass().getResource("/Recursos/tecNM.png");
+        ImageIcon icon = new ImageIcon(url);
+        Image img = icon.getImage().getScaledInstance(42, 42, Image.SCALE_SMOOTH);
+        setIconImage(img);
         
         pnTitulo.add(lbTitulo);
         add(pnTitulo, BorderLayout.NORTH);

@@ -13,15 +13,18 @@ public class PnInicio extends JPanel{
     }
     
     private void bienvenida() {
-        JPanel pnBienvenida = new JPanel();
+        JPanel pnBienvenida = new JPanel(new BorderLayout());
         pnBienvenida.setBorder(BorderFactory.createEmptyBorder(10, 5, 10, 5));
         pnBienvenida.setOpaque(false);
+        
         JLabel lbBienvenida = new JLabel();
+        
         ImageIcon iconoBienvenida1 = new ImageIcon(getClass().getResource("/Recursos/imgP.png"));
         Image imgBienvenida = iconoBienvenida1.getImage().getScaledInstance(600, 300, Image.SCALE_SMOOTH);
         ImageIcon iconoBienvenida2 = new ImageIcon(imgBienvenida);
         lbBienvenida.setIcon(iconoBienvenida2);
         pnBienvenida.add(lbBienvenida);
+        
         add(pnBienvenida, BorderLayout.NORTH);
     }
     

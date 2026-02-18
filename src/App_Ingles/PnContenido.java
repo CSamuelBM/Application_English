@@ -16,11 +16,14 @@ public class PnContenido extends JPanel{
         contenido = new CardLayout();
         setLayout(contenido);
         
-        PnInicio pnInicio = new PnInicio();
-        add(pnInicio, "INICIO");
+        //PnInicio pnInicio = new PnInicio();
+        //add(pnInicio, "INICIO");
         
-        PnTeoria pnTeoria = new PnTeoria();
-        add(pnTeoria, "TEORIA");
+        PnAbecedario pnAbecedario = new PnAbecedario();
+        add(pnAbecedario, "ABECEDARIO");
+        
+        PnPlanetas pnPlanetas = new PnPlanetas();
+        add(pnPlanetas, "PLANETAS");
         
         pnFormulario = new PnFormulario();
         add(pnFormulario, "FORMULARIO");
